@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\CardsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\FavoritesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\BankAccountsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\MenuPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\TransactionsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UsersPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\BankAccountWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\CardWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\FavoriteWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\TransactionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\UsersWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CardsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\FavoritesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\BankAccountsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TransactionsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UsersPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Dictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\BankAccountWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\CardWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\FavoriteWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\TransactionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\UsersWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

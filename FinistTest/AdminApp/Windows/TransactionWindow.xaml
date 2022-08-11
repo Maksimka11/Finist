@@ -1,0 +1,43 @@
+﻿<Window x:Class="AdminApp.Windows.TransactionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminApp.Windows"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+        mc:Ignorable="d"
+        Title="TransactionWindow" Loaded="Window_Loaded" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width= "200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Отправитель"/>
+        <ComboBox x:Name="cbSender" Grid.Column="1" DisplayMemberPath="Number" SelectedValuePath="Id"/>
+        <Label Grid.Row="1" Content="Получатель"/>
+        <ComboBox x:Name="cbReceiver" Grid.Column="1" Grid.Row="1" DisplayMemberPath="Number" SelectedValuePath="Id"/>
+        <Label Grid.Row="2" Content="Сумма"/>
+        <TextBox Grid.Column="1" Grid.Row="2" PreviewTextInput="Sum_PreviewTextInput" x:Name="tbSum"/>
+       
+        <Label Grid.Row="3" Content="Дата перевода"/>
+        <DatePicker Grid.Row="3" Grid.Column="1" SelectedDate="{x:Static sys:DateTime.Now}" x:Name="dpTransferDateTime"/>
+
+        <Grid Grid.Row="6" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnOk" Content="Сохранить" Click="BtnOk_Click"/>
+            <Button x:Name="BtnCancel" Grid.Column="1" Content="Отмена" Click="BtnCancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>

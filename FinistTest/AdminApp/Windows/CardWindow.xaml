@@ -1,0 +1,53 @@
+﻿<Window x:Class="AdminApp.Windows.CardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminApp.Windows"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="CardWindow" Loaded="Window_Loaded" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width= "200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Номер карты"/>
+        <TextBox Grid.Column="1" MaxLength="16" PreviewTextInput="Digital_PreviewTextInput" x:Name="tbNumber"/>
+        <Label Grid.Row="1" Content="CVV"/>
+        <TextBox Grid.Row="1" Grid.Column="1" MaxLength="3" PreviewTextInput="Digital_PreviewTextInput" x:Name="tbCVV"/>
+        <Label Grid.Row="2" Content="Дата выпуска"/>
+        <DatePicker Grid.Row="2" Grid.Column="1" SelectedDate="{x:Static sys:DateTime.Now}" x:Name="dpReleaseDate"/>
+        <Label Grid.Row="3" Content="Фото"/>
+        <TextBox Grid.Row="3" Grid.Column="1" MaxLength="100" x:Name="tbImage"/>
+        <Label Grid.Row="4" Content="Баланс"/>
+        <TextBox Grid.Row="4" Grid.Column="1" MaxLength="100" PreviewTextInput="TbBalance_PreviewTextInput" x:Name="tbBalance"/>
+        <Label Grid.Row="5" Content="Банковский счет"/>
+        <ComboBox x:Name="cbAccount" Grid.Column="1" Grid.Row="5" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+        <Label Grid.Row="6" Content="Тип карты"/>
+        <ComboBox x:Name="cbCardType" Grid.Column="1" Grid.Row="6">
+            <ComboBoxItem>Дебетовая</ComboBoxItem>
+            <ComboBoxItem>Кредитная</ComboBoxItem>
+        </ComboBox>
+            <Grid Grid.Row="8" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnOk" Content="Сохранить" Click="BtnOk_Click"/>
+            <Button x:Name="BtnCancel" Grid.Column="1" Content="Отмена" Click="BtnCancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>
